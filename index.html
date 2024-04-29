@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&family=DM+Sans:wght@300;400&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+ <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #000;
+      background-color: #E7E8D6; /* Background color changed */
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #000; /* White line divider */
+    }
+    .logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500; /* Slightly heavier weight */
+  color: #000;
+  font-size: 24px;
+}
+    .btn {
+      color: #000;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #E7E8D6; /* Button text color changed */
+    }
+    h1, h2, h3 {
+      font-family: 'Source Serif Pro', serif;
+      text-align: center;
+      color: #000;
+      font-weight: normal;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .plan {
+      background-color: #E7E8D6; /* Plan background color changed */
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;
+      border: 2px solid #000;
+    }
+    .plan ul {
+      padding: 0;
+    }
+    .plan li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    .tick {
+      color: #000;
+      margin-right: 10px;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      border: 2px solid #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #000;
+      color: #E7E8D6; /* Button text color changed */
+    }
+    .faq-section {
+      background-color: #E7E8D6; /* FAQ section background color changed */
+      width: 100%;
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .faq-container {
+      width: 80%;
+      max-width: 800px;
+      background-color: #000;
+      border-radius: 10px;
+      padding: 30px;
+    }
+    .faq-question {
+      cursor: pointer;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: bold;
+    }
+    .faq-answer {
+      display: none;
+      color: #000;
+      margin-top: 10px;
+    }
+    .faq-answer.show {
+      display: block;
+    }
+  
+  .faq-section .faq-question,
+.faq-section .faq-answer {
+  color: #fff; /* Changing font color to white */
+}
+  .faq-section h1 {
+  color: #fff; /* Changing font color to white */
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">QubeAI</div>
+    <a href=" https://arcaii.github.io/flexibility/" class="btn">Try Flexibility</a>
+  </nav>
+
+  <h1>Pricing</h1>
+
+  <div class="plan">
+    <h2>Free</h2>
+    <p>For individuals just getting started with ChatGPT</p>
+    <ul>
+      <h1>$0</h1>
+      <li><i class="fas fa-check tick"></i> Limited messages, interactions, and history</li>
+      <li><i class="fas fa-check tick"></i> Access to our GPT-3.5 model</li>
+      <li><i class="fas fa-check tick"></i> Access on web, iOS, Android (soon) </li>
+    </ul>
+   <button onclick="openPopup()" class="btn">Start now</button>
+  </div>
+
+  <div class="plan">
+    <h2>Plus</h2>
+    <p>For individuals looking to amplify their productivity</p>
+    <ul>
+      <h1>$20</h1>
+      <li><i class="fas fa-check tick"></i> Everything in Free, and:</li>
+      <li><i class="fas fa-check tick"></i> Access to GPT-4, our most capable model</li>
+      <li><i class="fas fa-check tick"></i> Browse, create, and use GPTs</li>
+      <li><i class="fas fa-check tick"></i> Access to additional tools like ALRO, Browsing, Advanced Data Analysis, and more</li>
+    </ul>
+   <button onclick="openPopup()" class="btn">Start now</button>
+  </div>
+
+  
+
+  <div class="plan">
+    <ul>
+      <h2>Team</h2>
+      <p> For fast-moving teams looking to supercharge collaboration</p>
+       <h1>$25</h1>
+      <li><i class="fas fa-check tick"></i> Everything in Plus, and:</li>
+      <li><i class="fas fa-check tick"></i> Higher message caps on GPT-4 and tools like ALRO, Browsing, Advanced Data Analysis, and more</li>
+      <li><i class="fas fa-check tick"></i> Create and share notes with your workspace</li>
+    </ul>
+    <button onclick="openPopup()" class="btn">Start now</button>
+  </div>
+
+  <div class="faq-section">
+    <div class="faq-container">
+      <h1>FAQs</h1>
+     <div class="faq-question" onclick="toggleAnswer('faq4')">Do you offer refunds?</div>
+      <div class="faq-answer" id="faq4">We offer refunds within a certain timeframe after your subscription purchase. Please check our refund policy for more details.</div>
+      <div class="faq-question" onclick="toggleAnswer('faq5')">Is there a limit on the number of users for Team and Enterprise plans?</div>
+      <div class="faq-answer" id="faq5">Team and Enterprise plans support unlimited users, allowing you to scale your collaboration seamlessly.</div>
+      <div class="faq-question" onclick="toggleAnswer('faq6')">How secure is flexibility?</div>
+      <div class="faq-answer" id="faq6">flexibility takes security seriously and employs various measures to protect your data, including encryption and access controls. We continuously monitor and update our security protocols to ensure the highest level of protection.</div>
+      <div class="faq-question" onclick="toggleAnswer('faq7')">What payment options do you accept?</div>
+      <div class="faq-answer" id="faq7">We accept major credit cards for purchasing ChatGPT Plus or Team plans. For Enterprise plans, please contact our sales team for alternative payment options such as invoicing.</div>
+      <div class="faq-question" onclick="toggleAnswer('faq8')">Can I cancel my subscription anytime?</div>
+      <div class="faq-answer" id="faq8">Yes, you can cancel your subscription at any time. Your subscription will remain active until the end of the current billing period, and you will not be charged for subsequent periods.</div>
+      <div class="faq-question" onclick="toggleAnswer('faq9')">How can I contact support?</div>
+      <div class="faq-answer" id="faq9">You can contact our support team through email or by submitting a ticket through our support portal. Our dedicated support staff is available to assist you with any questions or issues you may encounter.</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      answer.classList.toggle("show");
+    }
+  </script>
+
+<script>
+    function openPopup() {
+      // Create the mailto link with the provided Gmail address
+      var mailtoLink = 'mailto:architkumar41009@gmail.com?subject=Interested in flexibility AI Plan';
+      // Open the default mail client with the mailto link
+      window.open(mailtoLink);
+    }
+  </script>
+
+</body>
+</html>
+
